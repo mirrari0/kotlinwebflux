@@ -1,4 +1,4 @@
-package com.accenture.employee
+package com.example.employee
 
 import org.springframework.web.bind.annotation.*
 import reactor.core.publisher.Flux

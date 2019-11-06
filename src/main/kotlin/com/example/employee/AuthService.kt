@@ -1,4 +1,4 @@
-package com.accenture.employee
+package com.example.employee
 
 import org.springframework.security.crypto.password.PasswordEncoder
 import org.springframework.stereotype.Service

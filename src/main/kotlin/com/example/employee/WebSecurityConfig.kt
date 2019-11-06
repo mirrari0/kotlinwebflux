@@ -1,4 +1,4 @@
-package com.accenture.employee
+package com.example.employee
 
 import org.springframework.context.annotation.Bean
 import org.springframework.http.HttpMethod

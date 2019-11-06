@@ -1,4 +1,4 @@
-package com.accenture.employee
+package com.example.employee
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 

@@ -1,4 +1,4 @@
-package com.accenture.employee
+package com.example.employee
 
 import com.fasterxml.jackson.core.JsonProcessingException
 import com.fasterxml.jackson.databind.ObjectMapper
@@ -11,27 +11,25 @@ import java.time.Duration
 import java.time.Instant
 import java.util.UUID.randomUUID
 
-@Component("AuthWebSocketHandler")
-class AuthWebSocketHandler: WebSocketHandler {
+
+
+@Component("EmployeeWebSocketHandler")
+class EmployeeWebSocketHandler : WebSocketHandler {
 
     val om = ObjectMapper()
 
     override fun handle(webSocketSession: WebSocketSession): Mono<Void> {
-        val authCreationEvent = Flux.generate<String> {
-            sink ->
-                val event = AuthCreationEvent(randomUUID().toString(), Instant.now().toString())
-                try {
-                    sink.next(om.writeValueAsString(event))
-                }
-                catch (e: JsonProcessingException) {
-                    sink.error(e)
-                }
+        val employeeCreationEvent = Flux.generate<String> { sink ->
+            val event = EmployeeCreationEvent(randomUUID().toString(), Instant.now().toString())
+            try {
+                sink.next(om.writeValueAsString(event))
+            } catch (e: JsonProcessingException) {
+                sink.error(e)
+            }
         }
 
-        return webSocketSession.send(authCreationEvent
+        return webSocketSession.send(employeeCreationEvent
             .map(webSocketSession::textMessage)
             .delayElements(Duration.ofSeconds(1)))
-
     }
-
 }

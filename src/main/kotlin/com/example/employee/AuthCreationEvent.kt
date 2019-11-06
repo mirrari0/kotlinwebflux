@@ -1,3 +1,3 @@
-package com.accenture.employee
+package com.example.employee
 
 data class AuthCreationEvent(val id: String, val creationTime: String)
