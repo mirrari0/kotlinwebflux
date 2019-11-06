@@ -1,3 +1,6 @@
 package com.accenture.employee
 
-data class Employee (val id: String, val name: String )
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+data class Employee (val id: String ="INVALID", val name: String = "INVALID" )

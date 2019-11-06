@@ -12,7 +12,7 @@ import org.springframework.security.web.server.SecurityWebFilterChain
 
 
 @EnableWebFluxSecurity
-class EmployeeWebSecurityConfig {
+class WebSecurityConfig {
 
     @Bean
     fun userDetailsService(): MapReactiveUserDetailsService {
@@ -20,7 +20,6 @@ class EmployeeWebSecurityConfig {
             .password(passwordEncoder().encode("password"))
             .roles("ADMIN")
             .build()
-
         return MapReactiveUserDetailsService(user)
     }
 
@@ -29,8 +28,8 @@ class EmployeeWebSecurityConfig {
         http.csrf()
             .disable()
             .authorizeExchange()
-            .pathMatchers(HttpMethod.POST, "/employees/**")
-            .hasRole("ADMIN")
+//            .pathMatchers(HttpMethod.POST, "/employees/**")
+//            .hasRole("ADMIN")
             .pathMatchers("/**")
             .permitAll()
             .and()

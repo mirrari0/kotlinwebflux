@@ -3,7 +3,7 @@ package com.accenture.employee
 import org.springframework.web.reactive.function.client.WebClient
 
 class EmployeeWebClient {
-    val client = WebClient.create("http://localhost:8080")
+    private val client = WebClient.create("http://localhost:8080")
 
     fun consume() {
 

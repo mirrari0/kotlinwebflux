@@ -13,4 +13,7 @@ fun main(args: Array<String>) {
     val employeeWebClient = EmployeeWebClient()
     employeeWebClient.consume()
 
+    val authWebClient = AuthWebClient()
+    authWebClient.consume()
+
 }

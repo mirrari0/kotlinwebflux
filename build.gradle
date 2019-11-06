@@ -17,17 +17,18 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-webflux
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-webflux', version: '2.1.6.RELEASE'
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.6.RELEASE'
+//    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.6.RELEASE'
 
 //    compile group: 'org.springframework.data', name: 'spring-boot-starter-data-mongodb-reactive', version: '1.0.0.M2'
 //    compile group: 'org.springframework.data', name: 'spring-boot-starter-data-couchbase-reactive', version: '1.0.0.M2'
 //    compile group: 'org.springframework.data', name: 'spring-data-r2dbc', version: '1.0.0.M2'
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-security-reactive', version: '2.1.6.RELEASE'
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-autoconfigure', version: '2.1.6.RELEASE'
+//    compile group: 'org.springframework.boot', name: 'spring-boot-starter-security-reactive', version: '2.1.6.RELEASE'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-autoconfigure
+    compile group: 'org.springframework.boot', name: 'spring-boot-autoconfigure', version: '2.1.6.RELEASE'
+
     compile group: 'org.springframework.security', name: 'spring-security-core', version: '5.2.0.RELEASE'
     compile group: 'org.springframework.security', name: 'spring-security-config', version: '5.2.0.RELEASE'
     compile group: 'org.springframework.security', name: 'spring-security-web', version: '5.2.0.RELEASE'
-    compile group: 'io.projectreactor', name: 'reactor-spring', version: ''
 
     compile 'org.projectreactor:reactor-spring:1.0.1.RELEASE'
 }
