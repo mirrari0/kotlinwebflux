@@ -36,3 +36,4 @@ https://www.journaldev.com/20763/spring-webflux-reactive-programming
 1. Webflux expects to see a 'Reactive' repository, need to figure out what it means to create and interface with a reactive repository
 2. Other... things?
 3. Should be easy, but example of using a body to pass in data
+4. There is the concept of a Webflux Router... IDK what this does. 
